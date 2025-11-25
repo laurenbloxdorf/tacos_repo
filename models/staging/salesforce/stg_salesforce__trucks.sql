@@ -35,4 +35,6 @@ COALESCE(make, 'Custom') AS make,
 -- trim blank space
 TRIM(model) AS model,
 opening_date
-FROM tacos.raw.trucks
+
+
+FROM {{source('salesforce', 'trucks')}}
